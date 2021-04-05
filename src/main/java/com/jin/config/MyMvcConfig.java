@@ -12,6 +12,9 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @date 2021/4/3 17:59
  */
 
+
+//映射资源
+
 @Configuration
 public class MyMvcConfig implements WebMvcConfigurer {
 
@@ -20,6 +23,8 @@ public class MyMvcConfig implements WebMvcConfigurer {
         //访问这两个都跳到index
         registry.addViewController("/").setViewName("index");
         registry.addViewController("/index.html").setViewName("index");
+        registry.addViewController("/main.html").setViewName("dashboard");
+
     }
 
     //自定义国际化 放入Bean中生效
